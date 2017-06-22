@@ -1,0 +1,44 @@
+// function maxValue(nums) {
+//   var max = null;
+//   for(var i = 0; i < nums.length; i++){
+//     var num = nums[i];
+//     if (max === null || max < num) {
+//       max = num;
+//     }
+//   }
+//   return max;
+// }
+
+// var arr = [3, 4, 2, 7, 4, 1];
+// // var lastNum = arr[arr.length - 1]; // for last element
+
+// console.log(maxValue(arr)); // => 7
+
+
+
+
+
+// function isInArray(array, el) {
+//   return array.indexOf(el) > -1;
+// }
+
+// console.log(isInArray([1, 2, 3], 4)); // => false
+// console.log(isInArray(['a', 'b', 'c'], 'b')); // => true
+
+
+
+
+function myIndexOf(array, el) {
+  for(var i = 0; i < array.length; i++){
+    var value = array[i];
+    console.log('value:', value);
+    if (value === el){
+      return i; 
+    }
+  }
+  return -1;
+}
+
+console.log(myIndexOf([1, 2, 3], 3)); // => 2
+console.log(myIndexOf([1, 2, 2], 2)); // => 1
+console.log(myIndexOf(['a', 'b', 'c'], 'd')); // => -1
